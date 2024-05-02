@@ -1,8 +1,21 @@
 # Warp Plus Key Generator
 
-This is a Python script that generates Warp Plus keys for your applications using Cloudflare. 
+如何使用：
+
+- 执行 `pip install -r requirements.txt` 安装所需的依赖。
+- 在keys.json中填入已有的warp plus key。是的，你至少需要一个有效的warp plus key来生成新的key。
+- 在main.py中修改生成的key数量。默认一次生成一个。
+- 修改一个key所需要生成的流量，单位为GB，默认一个新key刷10GB，实际上刷出来的会少一点。
+- 执行 `python main.py` 开始生成key。
+
+---
+
+- 以下为README原文。
+
+This is a Python script that generates Warp Plus keys for your applications using Cloudflare.
 
 The script automates the following procedures:
+
 1. Registers a new user account
 2. Adds a referral to the account
 3. Deletes the referral account
@@ -18,7 +31,7 @@ The script automates the following procedures:
 
 These packages can be installed using:
 
-```
+```shell
 pip install -r requirements.txt
 ```
 
@@ -27,15 +40,18 @@ pip install -r requirements.txt
 1. Clone the repository
 2. Navigate to project directory
 3. Create the .env file in the project directory and populate it with your keys. The format should be:
-```
+
+```env
 KEYS=key1,key2,key3,...
 ```
+
 ❗All keys must be already Warp+ for generation new keys. You need at least a one warp+ key!
 4. To start the key generation process, simply run the Python script:
 
 ```bash
 python main.py
 ```
+
 Please note you need to specify the number of keys the program must generate in the `main` function.
 
 ## Disclaimer
@@ -46,8 +62,6 @@ This script is provided as is without any guarantees or warranty. The author is 
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check [issues page](http://github.com/4erdenko/warp_plus_keys_generator/issues).
-
 ## License
 
-[MIT](LICENSE) 
+[MIT](LICENSE)
